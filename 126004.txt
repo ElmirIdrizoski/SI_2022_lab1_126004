@@ -1,0 +1,181 @@
+mkdir SI_labaratoriski
+cd SI_labaratoriski
+git init 
+get status
+git clone https://github.com/ElmirIdrizoski/SI_2022_lab1_126004.git
+git status
+cd SI_2022_lab1_126004
+git status
+5. nano shopping_list.txt
+add  shopping_list.txt
+git commit -m "shopping_list.txt."
+6
+.nano shopping_list.txt
+$ git commit -a -m "Add quantities to the items"
+
+7
+git branch branch1
+git branch branch2
+8
+$ git log
+commit 0bdfc0da0e3fd3e75664b0eb46c03cfbcc854b62 (HEAD -> master, branch2, branch1)
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sat Apr 9 01:53:23 2022 +0200
+
+    Add quantities to the items
+
+commit 87406197c70cdb5af1cb32cab0938210ea78c1d5
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sat Apr 9 01:48:43 2022 +0200
+
+    shopping_list.txt.
+
+commit bbcafa856a816ed9cbcd90785bc72fb14af835b2 (origin/master, origin/HEAD)
+Author: Elmir Idrizoski <idrizoski.e@gmail.com>
+Date:   Fri Apr 8 17:09:40 2022 +0200
+
+    Update README.md
+
+commit a53c66ea517e6e40f9694cb722ea7efa6348376e
+:
+9
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 671 bytes | 223.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ElmirIdrizoski/SI_2022_lab1_126004.git
+   bbcafa8..0bdfc0d  master -> master
+10
+$ git checkout branch1
+Switched to branch 'branch1'
+11
+nano shopping_list.txt
+$ git commit -a -m "Change quantity of item 5"                                 
+ warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+[branch1 2c89850] Change quantity of item 5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+12
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+13
+nano shopping_list.txt
+$ git commit -a -m "Change quantity of item 2"
+[master 054dfdc] Change quantity of item 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+14
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 362 bytes | 120.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ElmirIdrizoski/SI_2022_lab1_126004.git
+   0bdfc0d..054dfdc  master -> master
+15
+$ git checkout branch2
+Switched to branch 'branch2'
+16
+nano shopping_list.txt
+$ git commit -a -m "Modify item #4"
+[branch2 e5f7a61] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+17
+$ git log
+commit e5f7a6104943bf7b34044208b04707989a4583ba (HEAD -> branch2)
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sun Apr 10 14:33:49 2022 +0200
+
+    Modify item #4
+
+commit 0bdfc0da0e3fd3e75664b0eb46c03cfbcc854b62
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sat Apr 9 01:53:23 2022 +0200
+
+    Add quantities to the items
+
+commit 87406197c70cdb5af1cb32cab0938210ea78c1d5
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sat Apr 9 01:48:43 2022 +0200
+
+    shopping_list.txt.
+
+commit bbcafa856a816ed9cbcd90785bc72fb14af835b2
+Author: Elmir Idrizoski <idrizoski.e@gmail.com>
+Date:   Fri Apr 8 17:09:40 2022 +0200
+
+    Update README.md
+:
+18
+$ git commit --amend -m "Modify item #4 and add item #6"
+[branch2 8222934] Modify item #4 and add item #6
+ Date: Sun Apr 10 14:33:49 2022 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+19
+git log
+commit 82229347cff8079393f79d1c6e5be26a049571de (HEAD -> branch2)
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sun Apr 10 14:33:49 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 0bdfc0da0e3fd3e75664b0eb46c03cfbcc854b62
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sat Apr 9 01:53:23 2022 +0200
+
+    Add quantities to the items
+
+commit 87406197c70cdb5af1cb32cab0938210ea78c1d5
+Author: ElmirIdrizoski <idrizoski.e@gmail.com>
+Date:   Sat Apr 9 01:48:43 2022 +0200
+
+    shopping_list.txt.
+
+commit bbcafa856a816ed9cbcd90785bc72fb14af835b2
+Author: Elmir Idrizoski <idrizoski.e@gmail.com>
+Date:   Fri Apr 8 17:09:40 2022 +0200
+
+    Update README.md
+:
+
+20
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Merge branch 'branch1'
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+
+Elce@Elmir MINGW64 ~/desktop/SI_labaratoriski/SI_2022_lab1_126004 (master)
+$ git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+21
+git checkout branch2
+git rebase master
+git rebase master
+ git status
+git add shopping_list.txt
+git commit -m"modify"
+git rebase --continue
+ git merge master
+22
+git commit -a -m "add docs "
+23
+git pus
+
+
+
+
+
