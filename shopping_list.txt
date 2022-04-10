@@ -2,4 +2,9 @@
 2. Jabolka x5
 3. Jagodi x1 
 4. Krushi x4 
+<<<<<<< HEAD
 5. Banani x6
+=======
+5. Banani x2
+6. Limoni x1
+>>>>>>> e34eeb7 (Modify item #4 and add item #6)
